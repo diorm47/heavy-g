@@ -110,6 +110,7 @@ button {
   background: #fff;
   border-bottom: 1px solid #33333314;
   position: relative;
+  padding-bottom: 0;
 }
 
 .nav_logo img {
@@ -712,7 +713,11 @@ button {
 }
 
 .items_list {
-  padding: 20px 0 30px;
+  /* padding: 20px 0 30px; */
+}
+
+.recommended_products .products_list_overflow {
+  padding-bottom: 0;
 }
 
 .secondary_title {
@@ -1208,6 +1213,31 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.option_item p,
+.option_item span,
+.option_item svg {
+  transition: all 0.4s ease;
+
+}
+
+.option_item:hover p,
+.option_item:hover span {
+  color: #c00c00;
+  transition: all 0.4s ease;
+}
+
+.option_item:hover svg * {
+  transition: all 0.4s ease;
+
+  fill: #c00c00;
+
+}
+
+.option_item:hover .icon--dollar_sign * {
+  stroke: #c00c00;
+  transition: all 0.4s ease;
 }
 
 .option_item svg {
@@ -2363,13 +2393,16 @@ input:valid~label {
 }
 
 .recommended_products_title h2 {
-  font-size: 24px;
+  font-size: 28px;
   color: #333333;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .recommended_products {
   padding: 36px 0;
+  padding-bottom: 20px;
 }
 
 .recommended_products_list {
@@ -2492,22 +2525,22 @@ input:valid~label {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .carousel_thumbnails img {
-  border: 1px solid #3333333f;
-  width: 156px;
-  height: 156px;
-  border-radius: 4px;
+  border: 1px solid #f4f4f4;
+  width: 80px;
+  height: 80px;
+
   object-fit: contain;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 
 .carousel_thumbnails img:hover {
-  transition: all 0.4s ease;
-  opacity: 0.7;
+  border-bottom: 2px solid #000;
+
 }
 
 .carousel_thumbnails .active {
@@ -2767,14 +2800,15 @@ table {
 
 .product_page_right_brand img {
   width: 100px;
-  margin-bottom: 20px;
+
 }
 
 .product_page_right_title h1 {
   font-size: 25px;
   color: #333333;
   font-weight: 300;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+  font-family: Prompt;
 }
 
 .product_page_rates img {
